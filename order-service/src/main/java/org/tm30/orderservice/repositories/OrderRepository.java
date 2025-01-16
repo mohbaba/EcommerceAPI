@@ -8,7 +8,7 @@ import java.util.*;
 
 @Repository
 public class OrderRepository {
-    private final Map<Long, Order> productRepo = new HashMap<>();
+    private final Map<Long, Order> orderRepo = new HashMap<>();
     private long nextId = 1;
 
     public Order save(Order order) {
@@ -17,36 +17,34 @@ public class OrderRepository {
         } else {
             order.setId(nextId++);
         }
-        productRepo.put(order.getId(), order);
+        orderRepo.put(order.getId(), order);
         return order;
     }
 
     public Optional<Order> findById(Long id) {
-        return Optional.ofNullable(productRepo.get(id));
+        return Optional.ofNullable(orderRepo.get(id));
     }
 
     public List<Order> findAll() {
-        return new ArrayList<>(productRepo.values());
+        return new ArrayList<>(orderRepo.values());
     }
 
     public Order update(Long id, Order order) {
-        if (!productRepo.containsKey(id)) {
-            throw new OrderNotFoundException("Product not found");
-        }
+
         order.setId(id);
-        productRepo.put(id, order);
+        orderRepo.put(id, order);
         return order;
     }
 
     public void delete(Long id) {
-        if (!productRepo.containsKey(id)) {
-            throw new OrderNotFoundException("Product not found");
+        if (!orderRepo.containsKey(id)) {
+            throw new OrderNotFoundException("Order not found");
         }
-        productRepo.remove(id);
+        orderRepo.remove(id);
     }
 
     public void clear() {
-        productRepo.clear();
+        orderRepo.clear();
         nextId = 1;
     }
 }
