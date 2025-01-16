@@ -4,46 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a303bc9e-58db-4b0c-874f-b1d91ec6049b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/org/tm30/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/controllers/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/dtos/requests/CreateOrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/dtos/requests/GetProductEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/eventpublishers/GetUserProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/models/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/services/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/org/tm30/orderservice/services/OrderServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/config/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/config/MapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/controllers/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/dtos/requests/AddProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/dtos/requests/UpdateProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/dtos/responses/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/exceptions/EcommerceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/exceptions/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/services/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/org/tm30/productservice/services/ProductServiceImplTest.java" afterDir="false" />
+    <list default="true" id="a303bc9e-58db-4b0c-874f-b1d91ec6049b" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/dtos/responses/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/eventpublishers/GetUserProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/eventpublishers/GetUserProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/org/tm30/orderservice/services/OrderServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/org/tm30/orderservice/services/OrderServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/controllers/ProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +22,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,41 +42,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ProductServiceImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceImplTest.testAddProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceImplTest.testDeleteProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceImplTest.testGetAllProducts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceImplTest.testGetProduct_ExistingProduct.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceImplTest.testUpdateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ENVY/Desktop/SIMBRELLA2/ecommerce/order-service/src/main/java/org/tm30/orderservice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ENVY/Desktop/SIMBRELLA2/ecommerce/order-service/src/main/java/org/tm30/Main.java&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.OrderServiceImplTest.testCreateOrder.executor": "Run",
+    "JUnit.ProductServiceImplTest.executor": "Run",
+    "JUnit.ProductServiceImplTest.testAddProduct.executor": "Run",
+    "JUnit.ProductServiceImplTest.testDeleteProduct.executor": "Run",
+    "JUnit.ProductServiceImplTest.testGetAllProducts.executor": "Run",
+    "JUnit.ProductServiceImplTest.testGetProduct_ExistingProduct.executor": "Run",
+    "JUnit.ProductServiceImplTest.testUpdateProduct.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ENVY/Desktop/SIMBRELLA2/ecommerce/order-service/src/main/java/org/tm30/orderservice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/ENVY/Desktop/SIMBRELLA2/ecommerce/order-service/src/main/java/org/tm30/Main.java",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ENVY\Desktop\SIMBRELLA2\ecommerce\order-service\src\main\java\org\tm30\orderservice" />
@@ -123,19 +91,22 @@
       <recent name="org.tm30.orderservice.services" />
       <recent name="org.tm30.productservice.services" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tm30.orderservice.exceptions" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
-    <configuration name="ProductServiceImplTest.testUpdateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product-service" />
+  <component name="RunManager" selected="JUnit.OrderServiceImplTest.testCreateOrder">
+    <configuration name="OrderServiceImplTest.testCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.tm30.productservice.services.*" />
+          <option name="PATTERN" value="org.tm30.orderservice.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.tm30.productservice.services" />
-      <option name="MAIN_CLASS_NAME" value="org.tm30.productservice.services.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="testUpdateProduct" />
+      <option name="PACKAGE_NAME" value="org.tm30.orderservice.services" />
+      <option name="MAIN_CLASS_NAME" value="org.tm30.orderservice.services.OrderServiceImplTest" />
+      <option name="METHOD_NAME" value="testCreateOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -197,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProductServiceApplication" />
+        <item itemvalue="JUnit.OrderServiceImplTest.testCreateOrder" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.ProductServiceApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="JUnit.ProductServiceImplTest.testUpdateProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -214,12 +185,33 @@
       <option name="presentableId" value="Default" />
       <updated>1737028093422</updated>
       <workItem from="1737028094738" duration="15692000" />
-      <workItem from="1737043845183" duration="865000" />
+      <workItem from="1737043845183" duration="3869000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1737045101328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737045101328</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1737045176896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737045176896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
