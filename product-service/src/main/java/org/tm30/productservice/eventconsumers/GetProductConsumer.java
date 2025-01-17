@@ -19,10 +19,10 @@ public class GetProductConsumer {
     public GetProductConsumer(PulsarClient pulsarClient, ProductMessageProducer productMessageProducer) {
         this.pulsarClient = pulsarClient;
         this.productMessageProducer = productMessageProducer;
-
+        consumeGetProductMessage();
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void consumeGetProductMessage(){
         try {
             consumer = pulsarClient.newConsumer(Schema.JSON(GetProductEvent.class))

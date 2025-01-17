@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a303bc9e-58db-4b0c-874f-b1d91ec6049b" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/dtos/requests/GetProductEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/eventconsumers/GetProductConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/eventpublishers/ProductMessageProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/config/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/dtos/responses/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/dtos/responses/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/eventpublishers/GetUserProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/eventpublishers/GetUserProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/org/tm30/orderservice/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/config/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/eventconsumers/GetProductConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/org/tm30/productservice/eventconsumers/GetProductConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <recent name="org.tm30.orderservice.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.pulsar: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="product-service" />
@@ -174,8 +169,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProductServiceApplication" />
-        <item itemvalue="Docker.docker-compose.yml.pulsar: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.pulsar: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.bookie: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
       </list>
@@ -190,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737028093422</updated>
       <workItem from="1737028094738" duration="15692000" />
-      <workItem from="1737043845183" duration="14277000" />
+      <workItem from="1737043845183" duration="20342000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -224,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737047769414</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1737115897365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737115897365</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

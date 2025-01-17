@@ -24,7 +24,8 @@ public class OrderServiceImpl implements OrderService{
     private GetUserProducer getUserProducer;
     @Override
     public Order createOrder(CreateOrderRequest request) {
-        log.info("Order Service currently running");
+        log.info("Order Service currently creating order");
+        getProduct(request.getProductId());
         ModelMapper modelMapper = new ModelMapper();
         Order order = modelMapper.map(request, Order.class);
         order.setTotalPrice(BigDecimal.valueOf(request.getTotalPrice()));
