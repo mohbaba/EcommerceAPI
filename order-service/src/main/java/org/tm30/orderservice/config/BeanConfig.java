@@ -4,6 +4,7 @@ import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.tm30.orderservice.eventpublishers.GetUserProducer;
 
 @Configuration
 public class BeanConfig {
@@ -14,5 +15,10 @@ public class BeanConfig {
             .serviceUrl("pulsar://localhost:6650")
             .build();
         return pulsarClient;
+    }
+
+    @Bean
+    public GetUserProducer getUserProducer(PulsarClient pulsarClient){
+        return new GetUserProducer(pulsarClient);
     }
 }

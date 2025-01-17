@@ -12,7 +12,7 @@ import org.tm30.orderservice.services.OrderService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/orders")
+@RequestMapping("api/orders")
 public class OrderController {
 
     @Autowired

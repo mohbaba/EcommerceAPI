@@ -1,18 +1,17 @@
 package org.tm30.orderservice.eventpublishers;
 
+import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pulsar.client.api.*;
 import org.tm30.orderservice.dtos.requests.GetProductEvent;
-import org.tm30.orderservice.dtos.responses.ProductResponse;
-
-import java.util.concurrent.CompletableFuture;
+import org.tm30.orderservice.dtos.responses.Product;
+import org.tm30.orderservice.exceptions.OrderNotFoundException;
 
 @Slf4j
 public class GetUserProducer {
     private final PulsarClient pulsarClient;
 
-    private static final String SERVICE_URL = "pulsar://localhost:6650"; // Pulsar service URL
-    private static final String TOPIC_NAME = "persistent://public/default/get-user-topic"; // Pulsar topic
+    private Consumer<Product> consumer;
 
     public GetUserProducer(PulsarClient pulsarClient) {
         this.pulsarClient = pulsarClient;
@@ -20,23 +19,7 @@ public class GetUserProducer {
 
 
 
-//    public void publishMessage(Long productId){
-//        Producer<GetProductEvent> producer;
-//        try {
-//            producer = pulsarClient.newProducer(Schema.JSON(GetProductEvent.class))
-//                    .topic("product-event")
-//                    .create();
-//            GetProductEvent getProductEvent = new GetProductEvent(productId);
-//            producer.send(getProductEvent);
-//
-//            producer.close();
-//            pulsarClient.close();
-//        } catch (PulsarClientException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
-    public CompletableFuture<ProductResponse> publishMessage(Long productId) {
+    public void publishMessage(Long productId) {
         Producer<GetProductEvent> producer;
         try {
             producer = pulsarClient.newProducer(Schema.JSON(GetProductEvent.class))
@@ -50,31 +33,45 @@ public class GetUserProducer {
         } catch (PulsarClientException e) {
             throw new RuntimeException("Failed to send message", e);
         }
+    }
 
-        CompletableFuture<ProductResponse> futureResponse = new CompletableFuture<>();
+     public void consumeGetProductMessage(){
         try {
-            Consumer<ProductResponse> consumer = pulsarClient.newConsumer(Schema.JSON(ProductResponse.class))
-                    .topic("product-event")
-                    .subscriptionName("order-service-subscription")
-                    .messageListener((msgConsumer, msg) -> {
-                        ProductResponse response = msg.getValue();
-                        log.info("Received response for product ID: {}", response.getProductId());
-
-                        futureResponse.complete(response);
-
+            consumer = pulsarClient.newConsumer(Schema.JSON(Product.class))
+                    .topic("get-product-event")
+                    .subscriptionName("get-product-consumer")
+                    .messageListener((consumer, msg) -> {
                         try {
-                            msgConsumer.acknowledge(msg);
+                            processMessage(msg);
+                            log.info("Message received");
+                            consumer.acknowledge(msg);
+                            consumer.close();
                         } catch (PulsarClientException e) {
-                            throw new RuntimeException(e);
+                            consumer.negativeAcknowledge(msg);
                         }
                     })
                     .subscribe();
-
-            return futureResponse;
         } catch (PulsarClientException e) {
-            throw new RuntimeException("Failed to create consumer", e);
+            throw new RuntimeException(e);
         }
     }
 
+    private void processMessage(Message<Product> msg) {
+        Product product = msg.getValue();
+        if (product.getProductId() == null)
+            throw new OrderNotFoundException("Product does not exist");
+
+    }
+
+    @PreDestroy
+    public void shutdown() {
+        if (consumer != null) {
+            try {
+                consumer.close();
+            } catch (PulsarClientException e) {
+                System.err.println("Failed to close Pulsar consumer: " + e.getMessage());
+            }
+        }
+    }
 
 }

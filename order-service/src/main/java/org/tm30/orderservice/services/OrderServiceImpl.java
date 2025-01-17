@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tm30.orderservice.dtos.requests.CreateOrderRequest;
+import org.tm30.orderservice.eventpublishers.GetUserProducer;
 import org.tm30.orderservice.models.Order;
 import org.tm30.orderservice.repositories.OrderRepository;
 
@@ -19,6 +20,8 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService{
     @Autowired
     private OrderRepository orderRepository;
+    @Autowired
+    private GetUserProducer getUserProducer;
     @Override
     public Order createOrder(CreateOrderRequest request) {
         log.info("Order Service currently running");
@@ -34,7 +37,8 @@ public class OrderServiceImpl implements OrderService{
         return orderRepository.findAll();
     }
 
-    private void getProduct(){
-
+    private void getProduct(Long productId){
+        getUserProducer.publishMessage(productId);
+        getUserProducer.consumeGetProductMessage();
     }
 }

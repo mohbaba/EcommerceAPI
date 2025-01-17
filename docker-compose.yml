@@ -1,42 +1,14 @@
-version: '3'
+version: '3'  
 
-services:
-  pulsar:
-    image: apachepulsar/pulsar:latest
-    container_name: pulsar
-    environment:
-      - PULSAR_MEM="-Xms2g -Xmx2g"
-      - PULSAR_LOG_LEVEL=info
-      - PULSAR_MODE=standalone
-      - PULSAR_PREFIX=public/default
-    ports:
-      - "6650:6650"
-      - "8080:8080"
-      - "6651:6651"
-      - "4140:4140"
-    volumes:
-      - pulsar_data:/pulsar/data
-    command: >
-      /bin/bash -c "
-        bin/pulsar standalone
-      "
-    networks:
-      - pulsar-network
+services:  
+  pulsar:  
+    image: apachepulsar/pulsar:latest  
+    command: ["bin/pulsar", "standalone"]  
+    ports:  
+      - "6650:6650"  
+      - "8089:8080"
+    volumes:  
+      - pulsardata:/pulsar/data  
 
-  zookeeper:
-    image: wurstmeister/zookeeper:3.5.9
-    container_name: zookeeper
-    environment:
-      - ZOOKEEPER_CLIENT_PORT=2181
-    ports:
-      - "2181:2181" # Zookeeper port
-    networks:
-      - pulsar-network
-
-volumes:
-  pulsar_data:
-    driver: local
-
-networks:
-  pulsar-network:
-    driver: bridge
+volumes:  
+  pulsardata:
